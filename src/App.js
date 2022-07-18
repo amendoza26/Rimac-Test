@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './pages/Login';
+import { useMemo, useState } from 'react';
+import { UserContext } from './UserContext';
+import Plan from './pages/Plan';
+import Bienvenida from './pages/Bienvenida';
 
 function App() {
+
+  const [user, setUser] = useState({
+    name: "",
+    document: "",
+    phone: "",
+    placa: "",
+    monto: 20,
+    mail: ""
+  })
+
+  const value = useMemo(() => ({ user, setUser }), [user, setUser])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <UserContext.Provider value={value} >
+        <Routes>
+          <Route path='/' element={<Login />} />
+          <Route path='/arma-tu-plan' element={<Plan />} />
+          <Route path='/bienvenida' element={<Bienvenida />} />
+        </Routes>
+      </UserContext.Provider>
+    </BrowserRouter>
   );
 }
 
