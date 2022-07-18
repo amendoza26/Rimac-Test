@@ -1,6 +1,6 @@
 Proyecto RIMAC
 
-Link del proyecto publicado: 
+Link del proyecto publicado: https://master--papaya-puppy-9f85ca.netlify.app/
 
 - Utilizando Tailwind para mejor manejo de css en proyectos grandes.
 - UseContext para el manejo del estado en forma global.
