@@ -6,7 +6,7 @@ import { UserContext } from '../UserContext'
 
 const Bienvenida = () => {
 
-    const { user, setUser } = useContext(UserContext)
+    const { user } = useContext(UserContext)
 
   return (
     <>
