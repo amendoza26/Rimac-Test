@@ -38,7 +38,6 @@ const Login = () => {
                     <div className='text-gray1-t text-xs mt-6'>¡NUEVO!</div>
                     <div className='text-4xl mt-1'>Seguro <span className='text-red-rimac'>Vehicular Tracking</span></div>
                     <div className='mt-4 xs:w-3/4'>Cuéntanos dónde le harás seguimiento a tu seguro</div>
-                    {/* <div className='mb-10'>© 2021 RIMAC Seguros y Reaseguros.</div> */}
                 </div>
             </section>
             <section className='flex-1 '>
@@ -62,7 +61,7 @@ const Login = () => {
                             <input type='checkbox' className='accent-green2 w-5 h-5 float-left' required={true} />
                             <label className='text-gray2-p flex pl-3 text-xs'>Acepto la Política de Protecciòn de Datos Personales y los Términos y Condiciones.</label>
                         </div>
-                        <div className='mt-14'>
+                        <div className='xs:mt-8 sm:mt-14 xs:mb-4 sm:mb-0'>
                             <button type='submit' className='bg-red-rimac py-5 px-12 rounded-lg text-white xs:w-full sm:w-auto'>COTÍZALO</button>
                         </div>
                     </form>
