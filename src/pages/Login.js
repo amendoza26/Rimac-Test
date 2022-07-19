@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import ilustracion from '../assets/ilustracion.png'
+import iluMobile from '../assets/ilustracion-mobile.png'
 
 import Header from '../components/Header'
 import { UserContext } from '../UserContext'
@@ -29,21 +30,21 @@ const Login = () => {
 
   return (
     <>
-        <div className='px-32'><Header /></div>
-        <div className='flex'>
-            <section className='w-2/5 bg-test bg-cover bg-no-repeat bg-left-top flex-none h-screen py-24'>
+        <div className='px-32 xs:px-10'><Header /></div>
+        <div className='flex xs:flex-col sm:flex-row'>
+            <section className='xs:w-full sm:w-2/5 sm:bg-login-desktop xs:bg-gray7 bg-cover bg-no-repeat bg-left-top flex-none sm:h-screen xs:pt-24 xs:pb-14 sm:py-24'>
                 <div className='flex flex-col mr-16 ml-auto max-w-xs'>
-                    <div className=' flex justify-end'><img src={ilustracion} alt='ilustracion' /></div>
+                    <div className=' flex justify-end xs:absolute xs:right-0 sm:static sm:right-auto'><img className='xs:hidden sm:block' src={ilustracion} alt='ilustracion' /><img className='xs:block sm:hidden' src={iluMobile} alt='ilustracion' /></div>
                     <div className='text-gray1-t text-xs mt-6'>¡NUEVO!</div>
                     <div className='text-4xl mt-1'>Seguro <span className='text-red-rimac'>Vehicular Tracking</span></div>
-                    <div className='mt-4'>Cuéntanos dónde le harás seguimiento a tu seguro</div>
+                    <div className='mt-4 xs:w-3/4'>Cuéntanos dónde le harás seguimiento a tu seguro</div>
                     {/* <div className='mb-10'>© 2021 RIMAC Seguros y Reaseguros.</div> */}
                 </div>
             </section>
             <section className='flex-1 '>
                 <div className='container mx-auto max-w-xs'>
                     <form onSubmit={handleSubmit}>
-                        <div className='mt-28 text-3xl text-gray1-t'>Déjanos tus datos</div>
+                        <div className='xs:mt-10 sm:mt-28 text-3xl text-gray1-t'>Déjanos tus datos</div>
                         <div className='flex mt-6'>
                             <select className='rounded-l w-2/5 shadow border border-gray4 focus:outline-none focus:shadow-outline p-4'>
                                 <option>DNI</option>
@@ -62,7 +63,7 @@ const Login = () => {
                             <label className='text-gray2-p flex pl-3 text-xs'>Acepto la Política de Protecciòn de Datos Personales y los Términos y Condiciones.</label>
                         </div>
                         <div className='mt-14'>
-                            <button type='submit' className='bg-red-rimac py-5 px-12 rounded-lg text-white'>COTÍZALO</button>
+                            <button type='submit' className='bg-red-rimac py-5 px-12 rounded-lg text-white xs:w-full sm:w-auto'>COTÍZALO</button>
                         </div>
                     </form>
                 </div>

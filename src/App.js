@@ -12,7 +12,7 @@ function App() {
     document: "",
     phone: "",
     placa: "",
-    monto: 20,
+    monto: 20.00,
     mail: ""
   })
 

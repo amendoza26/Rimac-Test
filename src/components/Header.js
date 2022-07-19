@@ -10,10 +10,11 @@ const Header = () => {
             <div className='flex justify-between'>
                 <Link to='/'><div><img src={logo} alt='logo' /></div></Link>
                 <div className='flex flex-row space-x-3'>
-                    <div className='text-gray2-p'>¿Tienes alguna duda?</div>
+                    <div className='text-gray2-p xs:hidden sm:block'>¿Tienes alguna duda?</div>
                     <div className='flex flex-row w-max'>
                         <img className='' src={phone} alt='phone' />
-                        <div className='text-acian2-hover text-sm w-full'>(01) 411 6001</div>
+                        <div className='text-acian2-hover text-sm w-full xs:hidden sm:block'>(01) 411 6001</div>
+                        <div className='text-acian2-hover text-sm w-full sm:hidden xs:block'>Llámanos</div>
                     </div>
                 </div>
             </div>

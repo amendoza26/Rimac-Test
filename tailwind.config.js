@@ -1,16 +1,22 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    screens: {
+      'xs': '300px',
+      ...defaultTheme.screens,
+    },
     extend: {
       backgroundImage: {
-        'test': "url('/src/assets/bg.png')"
+        'login-desktop': "url('/src/assets/bg.png')",
       }
     },
     colors: {
       'blue-berry': '#6769FF',
+      'acian2': '#6464FA',
       'acian2-hover': '#6F7DFF',
       'acian1': '#939DFF',
       'red-rimac': '#FF1C44',
