@@ -33,7 +33,7 @@ const Login = () => {
         <div className='px-32 xs:px-10'><Header /></div>
         <div className='flex xs:flex-col sm:flex-row'>
             <section className='xs:w-full sm:w-2/5 sm:bg-login-desktop xs:bg-gray7 bg-cover bg-no-repeat bg-left-top flex-none sm:h-screen xs:pt-24 xs:pb-14 sm:py-24'>
-                <div className='flex flex-col mr-16 ml-auto max-w-xs'>
+                <div className='flex flex-col xs:mx-5 sm:mr-16 sm:ml-auto max-w-xs'>
                     <div className=' flex justify-end xs:absolute xs:right-0 sm:static sm:right-auto'><img className='xs:hidden sm:block' src={ilustracion} alt='ilustracion' /><img className='xs:block sm:hidden' src={iluMobile} alt='ilustracion' /></div>
                     <div className='text-gray1-t text-xs mt-6'>¡NUEVO!</div>
                     <div className='text-4xl mt-1'>Seguro <span className='text-red-rimac'>Vehicular Tracking</span></div>
